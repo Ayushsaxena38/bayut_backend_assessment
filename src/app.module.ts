@@ -5,9 +5,13 @@ import { UsersModule } from './users/users.module';
 import { LoggerMiddleware } from './common/middleware/logger.middleware';
 import { DatabaseModule } from './database/database.module';
 import { JwtAuthModule } from './jwt/jwt-auth.module';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  imports: [UsersModule , DatabaseModule , JwtAuthModule],
+  imports: [UsersModule , DatabaseModule , JwtAuthModule ,
+    ConfigModule.forRoot({
+      isGlobal:true
+    })],
   controllers: [AppController],
   providers: [AppService],
 })
