@@ -14,8 +14,7 @@ import { SequelizeModule } from '@nestjs/sequelize';
             // username:'root',
             // password:'1234',
             // database:'bayut_clone_db',
-            uri:process.env.MYSQLURI,//"mysql://root:KOIHuhwgwHrcCMKcLsxfIkCTlIWWLjWc@crossover.proxy.rlwy.net:48064/railway",
-            autoLoadModels:true,
+            uri:process.env.MYSQLURI,
             synchronize:true,
             logging:false,
             pool:{
